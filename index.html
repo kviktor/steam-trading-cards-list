@@ -18,22 +18,23 @@
     <div class="container">
       <div class="header">
         <h3>Steam Trading Cards list</h3>
-          <p>
-            List your trading cards fast and easily. It can also generate a table output for reddit.com.
-          </p>
-          <a id="reddit-table-button" class="pull-right btn btn-default" href="#">Reddit table format</a>
+        <p>
+          List your trading cards fast and easily. It can also generate a table output for reddit.com.
+        </p>
+        <a id="reddit-table-button" class="pull-right btn btn-default" href="#">Reddit table format</a>
+        <a id="show-doubles" class="pull-right btn btn-default" href="#">Show only doubles</a>
       </div>
       <form>
-      <div class="input-group steam-id">
-        <input class="form-control" type="text" id="steam-id" placeholder="Steam ID">
+        <div class="input-group steam-id">
+          <input class="form-control" type="text" id="steam-id" placeholder="Steam ID">
           <div class="input-group-btn">
             <button class="btn btn-info" id="steam-id-submit" type="submit">List my cards</button>
           </div>
-      </div>
+        </div>
       </form>
       <textarea id="reddit-table" class="form-control pull-right"></textarea>
       <hr />
-    <div class="card-list"></div>
+      <div class="card-list"></div>
     </div>
   </body>
 </html>
