@@ -6,7 +6,7 @@ $(function() {
     var steam_id = $("#steam-id").val();
     if(steam_id.length > 0) {
       count = {}; games = {};
-      $(".card-list").html('<img src="loading.gif" id="loading"/>');
+      $(".card-list").html('<img src="img/loading.gif" id="loading"/>');
       $('[id^="reddit-table"]').hide();
       getCardsJson(steam_id);
     } else {
