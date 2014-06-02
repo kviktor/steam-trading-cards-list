@@ -64,7 +64,13 @@ function getCardsJson(steam_id) {
       
       // build up the card collection by games
       for(var key in cards_json) {
-        if (cards_json[key]['tags'][2]['name'] != "Trading Card" && cards_json[key]['tags'][2]['name'] != "Foil") continue;
+        if( // if there is no tags key
+           (!("tags" in cards_json[key]) || cards_json[key]['tags'].length < 4)
+            ||
+            // or it's not a Trading Card or Foil
+            (cards_json[key]['tags'][3]['internal_name'] != "item_class_2" && 
+            cards_json[key]['tags'][3]['internal_name'] != "item_class_1")) continue;
+
         card = {
           'name': cards_json[key]['name'].replace(" (Trading Card)", ""),
           'game': cards_json[key]['tags'][1]['name'],
