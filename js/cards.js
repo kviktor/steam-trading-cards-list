@@ -22,7 +22,7 @@ $(function() {
   });
   
   $("#show-doubles, #show-all").click(function() {
-    $(".card-list").html('<img src="loading.gif" id="loading"/>');
+    $(".card-list").html('<img src="img/loading.gif" id="loading"/>');
     if($(this).prop('id') == "show-doubles") {
       listDoubleGames();
       $(this).html("Show all").prop("id", "show-all");
